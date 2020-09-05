@@ -3,6 +3,7 @@ import Chat from './Chat'
 import Rooms from './Rooms'
 import MessageForm from './MessageForm'
 import LoginForm from './LoginForm'
+import Signup from './Signup'
 import React from 'react'
 import io from 'socket.io-client'
 import {
