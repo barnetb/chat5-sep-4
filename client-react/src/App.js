@@ -84,13 +84,16 @@ class App extends React.Component {
           <div className="table">
             <ul id="horizontal-list">
               <li>
-                <Link to="/signup"><button>Sign up</button></Link>
+                <Link to="/signup"><button>Sign Up</button></Link>
               </li>
+              {this.state.loggedIn 
+                ?
               <li>
-                <Link to="/logout" onClick={this.logMeOut.bind(this)}><button>Log out</button></Link>
-              </li>
+                <Link to="/logout" onClick={this.logMeOut.bind(this)}><button>Log {this.state.nick} Out</button></Link>}
+              </li> 
+                : ''}
               <li>
-                <Link to="/login"><button>Log in</button></Link>
+                <Link to="/login"><button>Log In</button></Link>
               </li>
               <li>
                 <Link to="/rooms/general"><button>Chat</button></Link>
@@ -103,7 +106,9 @@ class App extends React.Component {
         </div>
         <Switch>
           <Route path="/signup">
-          
+          {this.state.loggedIn 
+            ? <Redirect to="/" />  
+            : <Signup loginFunc={this.loginFunc.bind(this)}/>}
           </Route>
 
           <Route path="/logout" >

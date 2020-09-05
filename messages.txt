@@ -47,3 +47,5 @@
 {"text":"hello there!","nick":"dude","room":"asdfsdafsdaf","date":"2020-09-02T01:24:34.641Z"}
 {"text":"dafsadf","nick":"dude","room":"lkjflaskfjsa","date":"2020-09-02T02:16:17.050Z"}
 {"text":"so where","nick":"dustincat","room":null,"date":"2020-09-04T06:36:47.769Z"}
+{"text":"hello","nick":"Bob","room":"cool","date":"2020-09-05T03:22:08.458Z"}
+{"text":"Time to cook!","nick":"Bob","room":"Grease","date":"2020-09-05T03:22:34.834Z"}

@@ -13,9 +13,9 @@ function handleAddRoom () {
 
   return (
     <div id='rooms'>
-      <button onClick={handleAddRoom}>Add Room</button>
-      <label htmlFor='room-select'>Change Room:</label>
-      <select onChange={(evt) => history.push("/rooms/" + evt.target.value)} name='room' id='room-select'>
+      <button onClick={handleAddRoom}>Add a Room</button>
+      {/* <label htmlFor='room-select'>Change Room:</label> */}
+      <select onChange={(evt) => history.push("/rooms/" + evt.target.value)} name='room' id='room-select' placeholder="Change rooms...">
         <option value=''>--Select a Room--</option>
         {props.rooms.map(room => <option key={room} value={room}>{room}</option>)}
       </select>

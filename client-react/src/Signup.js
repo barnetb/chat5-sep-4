@@ -15,7 +15,7 @@ class Signup extends React.Component {
   
     handleSubmit (evt) {
       evt.preventDefault()
-      this.props.sendMessage(this.state.formValue, this.props.room)
+      this.props.loginFunc(this.state.nick, this.state.password)
     }
   
     handleChange (evt, key) {
@@ -24,12 +24,24 @@ class Signup extends React.Component {
 
     render () {
         return (
-          <form id='send-message' onSubmit={this.handleSubmit.bind(this)}>
-            <input id='nickname' type='text' placeholder='Enter nickname...' value={this.state.nick} onChange={(evt) => {this.handleChange(evt, 'nick')}
+          <form id='signup' onSubmit={this.handleSubmit.bind(this)}>
+            <div>
+              <input id='nickname' type='text' placeholder='Enter nickname...' value={this.state.nick} onChange={(evt) => {this.handleChange(evt, 'nick')}
+              } />
+            </div>
+            <div>
+            <input id='email' type='text' placeholder='Enter e-mail...' value={this.state.email} onChange={(evt) => {this.handleChange(evt, 'email')}
             } />
-            <input id='password' type='password' placeholder='Enter password...' value={this.state.password} onChange={this.handlePasswordChange.bind(this)} />
-            <input id='password2' type='password' placeholder='Verify password...' value={this.state.password} onChange={this.handlePasswordChange.bind(this)} />
-            <button type='submit'>Login</button>
+            </div>
+            <div>
+              <input id='password' type='password' placeholder='Enter password...' value={this.state.password} onChange={(evt) => {this.handleChange(evt, 'password')}} />
+            </div> 
+            <div>
+              <input id='password2' type='password' placeholder='Verify password...' value={this.state.password2} onChange={(evt) => {this.handleChange(evt, 'password2')}} />
+            </div>
+            <div>
+              <button type='submit'>Submit</button>
+            </div>
           </form>
         )
       }
